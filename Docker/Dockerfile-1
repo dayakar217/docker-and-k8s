@@ -1,0 +1,7 @@
+FROM node:16.20.0-alpine as app
+RUN npx create-react-app sample
+WORKDIR /sample
+RUN npm run build
+CMD ["npm","start"]
+
+

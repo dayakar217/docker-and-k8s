@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: react-service
+  labels:
+    name: react-service
+    app: myapp
+spec:
+  type: NodePort
+  ports:
+    - port: 800
+      targetPort: 800
+      nodePort: 32767
+  selector:
+    app: myapp
